@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: white;
+  background: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-box {
+  background: url('../assets/230321225342-01-japan-baseball-world-classic-win-032123.jpg') no-repeat center center/cover;
+  flex: 9;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(122, 121, 121, 0.5);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.logo img{
+    height: 80px;
+    width: auto;
+}
+
+.logo span {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+nav .nav-links .buy {
+  background: rgba(44, 44, 43, 0.8);
+  padding: 12px 20px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.hero-content {
+  position: absolute;
+  top: 40%;
+  left: 60px;
+  max-width: 500px;
+  background-color: rgba(43, 42, 42, 0.5);
+  color: white;
+  padding-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.buttons .btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.btn.watch {
+  background: #2979ff;
+  color: white;
+}
+
+.btn.get {
+  background: #00c853;
+  color: white;
+}
+
+.countdown {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 30px 60px;
+  color: white;
+}
+
+.teams{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
+}
+
+.teams img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.team{
+    display: flex;
+    flex-direction: column;            
+    align-items: center;
+    gap: 8px;
+
+}
+.teams span{
+    margin-right:15px;
+}
+
+.event-info {
+  text-align: start;
+}
+
+.timer {
+  display: flex;
+  gap: 50px;
+}
+
+.timer div {
+  text-align: center;
+}
+
+.timer strong {
+  font-size: 40px;
+  display: flex;
+}
+
+.btn.buy {
+  background: #00c853;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+}
