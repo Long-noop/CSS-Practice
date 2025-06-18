@@ -15,6 +15,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .hero-box {
   position: relative;
   height: 100vh;
@@ -40,36 +41,44 @@ body {
   z-index: 1;
 }
 
-.navbar {
+.navbar-wrapper{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-  background: rgba(122, 121, 121, 0.5);
 }
 
-.logo {
+.navbar-logo {
+  position: absolute;
   display: flex;
   align-items: center;
+  background: #111;
+  color: white;
+  padding: 30px 50px;
   gap: 10px;
-  font-weight: bold;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  z-index: 1;
+
 }
 
-.logo img{
+.navbar-logo img{
+    padding-top: 20px;
     height: 80px;
     width: auto;
 }
 
-.logo span {
-  font-size: 24px;
-  color: white;
-  font-weight: bold;
+.navbar {
+  width: 100%;
+  padding: 20px 40px;
+  margin-top: 10px;
+  background: rgba(107, 105, 105, 0.5);
+  z-index: 0;
 }
 
-.nav-links{
-    list-style: none;
-    display: flex;
-    gap: 100px;
+.nav-links {
+  display: flex;
+  gap: 100px;
+  justify-content: flex-end;
+  list-style: none;
 }
 
 .nav-links a {
@@ -78,6 +87,7 @@ body {
   font-size: 25px;
   font-weight: bold;
 }
+
 
 nav .nav-links .buy {
   background: rgba(44, 44, 43, 0.8);
@@ -92,7 +102,6 @@ nav .nav-links .buy {
   top: 40%;
   left: 60px;
   max-width: 500px;
-  /* background-color: rgba(43, 42, 42, 0.5); */
   color: white;
   padding-bottom: 10px;
 }
@@ -113,6 +122,7 @@ nav .nav-links .buy {
   border-radius: 4px;
   text-decoration: none;
   margin-right: 10px;
+  font-weight: bold;
 }
 
 .btn.watch {
@@ -161,6 +171,7 @@ nav .nav-links .buy {
 
 .event-info {
   text-align: start;
+  font-size: 20px;
 }
 
 .timer {
@@ -170,6 +181,12 @@ nav .nav-links .buy {
 
 .timer div {
   text-align: center;
+  padding: 0 20px;
+}
+
+
+.timer div:not(:first-child) {
+  border-left: 2px solid #555;
 }
 
 .timer strong {
@@ -180,7 +197,9 @@ nav .nav-links .buy {
 .btn.buy {
   background: #00c853;
   color: white;
-  padding: 10px 20px;
+  padding: 30px 60px;
   text-decoration: none;
   border-radius: 4px;
+  font-weight: bold;
+  font-size: 20px;
 }
