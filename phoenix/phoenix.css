@@ -15,11 +15,29 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .hero-box {
-  background: url('../assets/230321225342-01-japan-baseball-world-classic-win-032123.jpg') no-repeat center center/cover;
-  flex: 9;
   position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/230321225342-01-japan-baseball-world-classic-win-032123.jpg') no-repeat center center / cover;
+  filter: brightness(50%);
+  z-index: 0;
+}
+
+.hero-box > * {
+  position: relative;
+  z-index: 1;
 }
 
 .navbar {
@@ -51,12 +69,14 @@ body {
 .nav-links{
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 100px;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 nav .nav-links .buy {
@@ -72,7 +92,7 @@ nav .nav-links .buy {
   top: 40%;
   left: 60px;
   max-width: 500px;
-  background-color: rgba(43, 42, 42, 0.5);
+  /* background-color: rgba(43, 42, 42, 0.5); */
   color: white;
   padding-bottom: 10px;
 }
